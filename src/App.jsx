@@ -1,12 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import Header from './Header'
+import Sections from './Sections/Sections'
+import Footer from './Footer'
+
 
 function App() {
 
+
   return (
     <div className="App">
-      Hello!
+      <Header />
+      <Sections />
+      <Footer />
     </div>
   )
 }
