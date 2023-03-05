@@ -4,7 +4,6 @@ const HeaderLink = ({ title }) => {
   const [isActive, setIsActive] = useState(false)
 
   const handleClick = () => {
-
     console.dir(element)
     element.scrollIntoView({ behavior: 'smooth' })
   }
