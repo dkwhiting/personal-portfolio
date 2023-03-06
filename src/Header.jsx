@@ -7,7 +7,7 @@ const Header = () => {
       title: 'Home',
     },
     {
-      title: 'About',
+      title: 'Skills',
     },
     {
       title: 'Projects',

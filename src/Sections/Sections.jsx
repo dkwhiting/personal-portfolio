@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   Home,
-  About,
+  Skills,
   Projects,
   Contact
 } from './'
@@ -14,7 +14,7 @@ const Sections = () => {
         <Home />
       </div>
       <div className="section">
-        <About />
+        <Skills />
       </div>
       <div className="section">
         <Projects />
