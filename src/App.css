@@ -84,3 +84,28 @@ a:hover {
   flex-direction: column;
 
 }
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.project {
+  padding: 0 50px;
+  display: flex;
+  gap: 30px;
+}
+
+.project .right {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.project .left img {
+  width: 300px;
+}
