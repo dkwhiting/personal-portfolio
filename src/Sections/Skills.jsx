@@ -59,15 +59,17 @@ const Skills = () => {
   console.log(skillsIcons[0].path)
 
   return (<>
-    <h2 className="section-title">My Skills</h2>
     <div id="skills">
-      {
-        skillsIcons.map((skill, index) => {
-          return (
-            <SkillTile name={skill.name} path={skill.path} />
-          )
-        })
-      }
+      <h2 className="section-title">My Skills</h2>
+      <div className="skills-tiles">
+        {
+          skillsIcons.map((skill, index) => {
+            return (
+              <SkillTile name={skill.name} path={skill.path} />
+            )
+          })
+        }
+      </div>
     </div>
   </>
   )
