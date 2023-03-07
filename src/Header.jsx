@@ -1,5 +1,6 @@
 import React from 'react'
 import HeaderLink from './HeaderLink'
+import Logo from './Logo'
 
 const Header = () => {
   const headerLinks = [
@@ -19,6 +20,9 @@ const Header = () => {
 
   return (
     <div id="header">
+      <div >
+        <Logo />
+      </div>
       {
         headerLinks.map((link, i) => {
           return (
