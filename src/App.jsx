@@ -2,7 +2,8 @@ import './App.css'
 import Header from './Header'
 import Sections from './Sections/Sections'
 import Footer from './Footer'
-import { Fade } from 'react-awesome-reveal'
+import ParticleContainer from './ParticleContainer'
+
 
 
 function App() {
@@ -10,19 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      <Fade
-        direction={"down"}
-        triggerOnce={true}
-      >
-        <Header />
-      </Fade>
-      <Fade direction={"up"}
-        triggerOnce={true}
-      >
-        <Sections />
-      </Fade>
-
+      <Header />
+      <Sections />
       <Footer />
+      <ParticleContainer />
     </div>
   )
 }

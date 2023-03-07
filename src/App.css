@@ -32,8 +32,9 @@ a:hover {
   align-items: center;
 }
 
-.section:nth-child(odd) {
-  background-color: #555;
+.section:nth-child(even) {
+  color: black;
+  background-color: white;
 }
 
 .section {
@@ -119,4 +120,22 @@ a:hover {
 
 .project .left img {
   width: 450px;
+}
+
+#home {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tsparticles {
+  width: 100%;
+  height: 100%;
+}
+
+#particle-container {
+  z-index: -1;
 }

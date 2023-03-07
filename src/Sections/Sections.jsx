@@ -14,10 +14,10 @@ const Sections = () => {
         <Home />
       </div>
       <div className="section">
-        <Skills />
+        <Projects />
       </div>
       <div className="section">
-        <Projects />
+        <Skills />
       </div>
       <div className="section">
         <Contact />
