@@ -9,14 +9,10 @@ const Project = ({ project }) => {
       direction={"up"}
       triggerOnce={true}
     >
-
       <div className="project">
-        <div className="left">
-          <img src={project.imgPath} alt={`${project.name} image`} />
-        </div>
-        <div className="right">
-          <h3>{project.name}</h3>
-          <p>{project.description}</p>
+        <img src={project.imgPath} alt={`${project.name} image`} />
+        <div className="project-overlay">
+
         </div>
       </div>
     </Fade>

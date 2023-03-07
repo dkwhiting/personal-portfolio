@@ -2,7 +2,7 @@ import './App.css'
 import Header from './Header'
 import Sections from './Sections/Sections'
 import Footer from './Footer'
-import ParticleContainer from './ParticleContainer'
+import SocialsSidebar from './SocialsBar'
 
 
 
@@ -13,8 +13,8 @@ function App() {
     <div className="App">
       <Header />
       <Sections />
+      <SocialsSidebar />
       <Footer />
-      <ParticleContainer />
     </div>
   )
 }

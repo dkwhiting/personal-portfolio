@@ -49,6 +49,7 @@ a:hover {
 }
 
 #skills {
+  position: relative;
   max-width: 630px;
   display: flex;
   flex-direction: column;
@@ -136,6 +137,65 @@ a:hover {
   height: 100%;
 }
 
-#particle-container {
+#tsparticles {
+  position: absolute;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  margin: 0;
+  padding: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+#socials-sidebar {
+  background-color: transparent;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  left: 10px;
+  bottom: 10px;
+  mix-blend-mode: difference;
+}
+
+#socials-sidebar .social-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+.socials-spacer {
+  margin-left: 15px;
+  background-color: white;
+  height: 100px;
+  width: 2px;
+}
+
+.social-sliders {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.single-social {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.single-social {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transform: translateX(-95px)
+}
+
+.single-social.hover {
+  justify-content: flex-start;
+  align-self: flex-start;
+  transform: translateX(0)
 }
