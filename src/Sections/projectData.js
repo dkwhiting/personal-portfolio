@@ -8,7 +8,7 @@ export const projects = [
         path: "logos:react"
       }
     ],
-    imgPath: 'src/assets/flashsheet.png',
+    imgPath: 'flashsheet.png',
     repoURL: '',
     liveURL: ''
   },
@@ -21,7 +21,7 @@ export const projects = [
         path: "logos:react"
       }
     ],
-    imgPath: 'src/assets/fitness-tracker.png',
+    imgPath: 'fitness-tracker.png',
     repoURL: '',
     liveURL: ''
   },
