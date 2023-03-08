@@ -61,7 +61,7 @@ a:hover {
 
 .section:nth-child(even) {
   color: black;
-  background-color: white;
+  background-color: rgb(246, 246, 246);
 }
 
 .section {
@@ -139,19 +139,75 @@ a:hover {
 }
 
 .project {
-  max-width: 60vw;
-  padding: 0 50px;
+  background-color: white;
+  max-width: 400px;
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%)
+}
+
+.project-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.project-bottom .project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project .project-header .project-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-blue,
+.btn-blue-outline {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.btn-blue a {
+  color: white
+}
+
+
+.project-header .project-buttons .btn-blue {
+  background-color: blue;
+  color: white;
+}
+
+.project-bottom .project-description {
+  font-size: 14px;
+}
+
+.project .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.project .single-tech {
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0 3px;
 }
 
 .project img {
   width: 100%;
   object-fit: contain;
-}
-
-.project .left img {
-  width: 450px;
+  border-radius: 10px;
 }
 
 #home {
@@ -253,7 +309,6 @@ a:hover {
 }
 
 #logo {
-  fill: #feb95f;
   width: 50px;
   height: 50px;
   border-radius: 50%;
