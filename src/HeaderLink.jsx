@@ -4,17 +4,12 @@ const HeaderLink = ({ title }) => {
   const [isActive, setIsActive] = useState(false)
   const [hover, setHover] = useState()
 
-  const handleStartHover = () => {
-    const hover = () => {
-      setTimeout
-    }
-
-
+  const handleStartHover = (e) => {
+    setHover(true)
   }
 
-  const handleEndHover = () => {
-
-
+  const handleEndHover = (e) => {
+    setHover(false)
   }
 
   const handleClick = () => {
@@ -25,12 +20,14 @@ const HeaderLink = ({ title }) => {
   }
 
   return (
-    <div className={`header-link ${isActive ? 'active' : ''} `}>
+    <div className={`header-link ${isActive ? 'active' : ''} `}
+      onClick={handleClick}
+      onMouseEnter={handleStartHover}
+      onMouseLeave={handleEndHover}>
       <a
-        onClick={handleClick}
-        onMouseEnter={handleStartHover}
-        onMouseLeave={handleEndHover}
+
       >{title}</a>
+      <div className={`bottom-border ${hover ? 'hover' : ''}`} />
     </div >
   )
 }

@@ -1,33 +1,59 @@
 #root {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .App {
+  margin: 0;
+  padding: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 #header {
+  background-color: #233146;
   position: sticky;
-  top: 10px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 5px;
+  padding: 5px 20px;
   z-index: 999;
+  gap: 20px;
+}
+
+#header div:first-child {
+  margin-right: auto;
 }
 
 a:hover {
   cursor: pointer;
 }
 
+#header .bottom-border {
+  background-color: #FEB95F;
+  width: 0;
+  height: 3px;
+  border-radius: 1px;
+  transition: all 200ms ease-in-out;
+}
+
+#header .bottom-border.hover {
+  width: 100%;
+}
+
+#header .header-link {
+  display: flex;
+  flex-direction: column;
+}
+
 #sections {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,11 +69,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.section {
   padding: 50px 0;
 }
+
 
 #skills {
   position: relative;
@@ -68,6 +92,7 @@ a:hover {
 }
 
 .tile {
+  font-size: 16px;
   padding: 10px;
   width: 100px;
   height: 100px;
@@ -76,6 +101,10 @@ a:hover {
   justify-content: center;
   align-items: center;
   transition: all 200ms ease-in-out;
+}
+
+.tile:hover {
+  transform: scale(1.25);
 }
 
 .tile .icon svg {
@@ -90,6 +119,9 @@ a:hover {
 #contact {
   display: flex;
   flex-direction: column;
+  margin: 0 150px;
+  max-width: 600px;
+  flex: 1;
 }
 
 #contact form {
@@ -107,17 +139,15 @@ a:hover {
 }
 
 .project {
+  max-width: 60vw;
   padding: 0 50px;
   display: flex;
   gap: 30px;
 }
 
-.project .right {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
+.project img {
+  width: 100%;
+  object-fit: contain;
 }
 
 .project .left img {
@@ -125,28 +155,43 @@ a:hover {
 }
 
 #home {
-  height: 400px;
+  height: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding-bottom: 200px;
+  gap: 20px;
 }
 
-#tsparticles {
-  width: 100%;
-  height: 100%;
+#home h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 4rem;
+  margin: -20px 0;
 }
 
-#tsparticles {
-  position: absolute;
-  left: calc(50% - 100px);
-  top: calc(50% - 100px);
-  margin: 0;
-  padding: 0;
-  z-index: -1;
+#home .about h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2rem;
+}
+
+#home .job-title {
   width: 100%;
-  height: 100%;
+  display: inline;
+  transition: all 200ms ease-in-out;
+  opacity: 0.8;
+}
+
+#home .job-title:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#home button {
+  background-color: #8ecae6;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
 }
 
 #socials-sidebar {
@@ -155,7 +200,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  left: 10px;
+  left: 8px;
   bottom: 10px;
   mix-blend-mode: difference;
 }
@@ -163,13 +208,13 @@ a:hover {
 #socials-sidebar .social-icon {
   width: 30px;
   height: 30px;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 .socials-spacer {
-  margin-left: 15px;
+  margin-left: 10px;
   background-color: white;
-  height: 100px;
+  height: 10vh;
   width: 2px;
 }
 
@@ -182,7 +227,6 @@ a:hover {
 
 .single-social {
   display: flex;
-  justify-content: flex-end;
   padding: 5px;
   transition: all 200ms ease-in-out;
   cursor: pointer;
@@ -192,18 +236,32 @@ a:hover {
   width: 100%;
   display: flex;
   align-items: center;
-  transform: translateX(-95px)
 }
 
-.single-social.hover {
+.single-social.github {
+  transform: translateX(-85px)
+}
+
+.single-social.linkedin {
+  transform: translateX(-100px)
+}
+
+.single-social:hover {
   justify-content: flex-start;
   align-self: flex-start;
   transform: translateX(0)
 }
 
 #logo {
-  fill: white;
-  width: 40px;
-  height: 40px;
-  mix-blend-mode: difference;
+  fill: #feb95f;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 3px;
+  transition: all 200ms ease-in-out;
+}
+
+#logo:hover {
+  transform: scale(1.25);
+  cursor: pointer;
 }

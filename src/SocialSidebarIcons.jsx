@@ -3,22 +3,12 @@ import { Icon } from '@iconify/react'
 
 
 const SocialSidebarIcons = ({ name, iconPath, index }) => {
-  const [hover, setHover] = useState(false)
-
-  const handleStartHover = (e) => {
-    setHover(true)
-  }
-
-  const handleEndHover = (e) => {
-    setHover(false)
-  }
 
   return (
 
     <div
-      className={`single-social ${name} ${hover ? 'hover' : ''}`}
-      onMouseEnter={(e) => handleStartHover(e)}
-      onMouseLeave={(e) => handleEndHover(e)}
+      className={`single-social ${name.toLowerCase()}`}
+
       key={index}
     >
 

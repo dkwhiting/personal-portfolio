@@ -1,20 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  background-color: #233146;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 a,
 a:hover {
   text-decoration: none;
-}
-
-body {
-  font-family: sans-serif;
-  background-color: #233146;
-  color: white;
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1,
