@@ -131,42 +131,58 @@ a:hover {
 }
 
 #projects {
-  max-width: 800px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 70%;
+}
+
+.project-tiles {
+  max-width: 100%;
+  display: flex;
   gap: 30px;
 }
 
 .project {
   background-color: white;
-  max-width: 400px;
   display: flex;
   flex-direction: column;
-  border-radius: 4px;
-  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%)
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  overflow: hidden;
+  flex: 1;
 }
 
 .project-bottom {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 10px;
   gap: 10px;
 }
 
 .project-bottom .project-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.project .project-header .project-buttons {
+.project-bottom .project-header .project-title {
+  font-family: 'Nunito', sans-serif;
+}
+
+.project .project-bottom .project-buttons {
   display: flex;
+  justify-content: flex-end;
   gap: 10px;
 }
 
 .btn-blue,
-.btn-blue-outline {
+.btn-red-outline {
+  width: 70px;
+  height: 35px;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -175,17 +191,39 @@ a:hover {
   display: flex;
   gap: 3px;
   align-items: center;
+  justify-content: center;
 }
 
 .btn-blue a {
   color: white
 }
 
+.btn-blue {
+  background-color: #5fa8d3;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
 
-.project-header .project-buttons .btn-blue {
-  background-color: blue;
+.btn-blue:hover {
+  background-color: #4d90b7;
+}
+
+.btn-red-outline a {
+  color: #DB504A
+}
+
+.btn-red-outline {
+  color: #DB504A;
+  border: 2px solid #DB504A;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-red-outline:hover {
+  background-color: #DB504A;
   color: white;
 }
+
+
 
 .project-bottom .project-description {
   font-size: 14px;
@@ -195,19 +233,22 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  margin-top;
 }
 
 .project .single-tech {
+  background-color: #35445b;
+  color: white;
+  font-family: 'Nunito', sans-serif;
   font-size: 14px;
-  border: 1px solid black;
   border-radius: 3px;
-  padding: 0 3px;
+  padding: 2px 5px;
 }
 
 .project img {
   width: 100%;
   object-fit: contain;
-  border-radius: 10px;
+  object-position: top;
 }
 
 #home {
@@ -218,6 +259,7 @@ a:hover {
   justify-content: center;
   padding-bottom: 200px;
   gap: 20px;
+  padding: 0 80px;
 }
 
 #home h1 {
@@ -319,4 +361,20 @@ a:hover {
 #logo:hover {
   transform: scale(1.25);
   cursor: pointer;
+}
+
+@media (max-width: 840px) {
+  .project-tiles {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 980px) {
+  .single-social.github:hover {
+    transform: translateX(-85px)
+  }
+
+  .single-social.linkedin:hover {
+    transform: translateX(-100px)
+  }
 }

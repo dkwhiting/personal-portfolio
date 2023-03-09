@@ -62,7 +62,7 @@ export const projects = [
       postgresql
     ],
     imgPath: 'fitness-tracker.png',
-    repoURL: '',
-    liveURL: ''
+    repoURL: 'https://github.com/dkwhiting/fitness-tracker-react/tree/production',
+    liveURL: 'https://dkwhiting.github.io/fitness-tracker-react'
   },
 ]
