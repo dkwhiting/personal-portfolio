@@ -1,5 +1,6 @@
 import React from 'react'
 import SocialSidebarIcons from './SocialSidebarIcons'
+import { Fade } from 'react-awesome-reveal'
 
 const SocialsSidebar = () => {
   const socialIcons = [
@@ -16,17 +17,23 @@ const SocialsSidebar = () => {
 
   return (
     <div id="socials-sidebar">
-      <div className="social-sliders">
-        {
-          socialIcons.map((icon, index) => {
-            return (
-              <SocialSidebarIcons name={icon.name} iconPath={icon.iconPath} index={index} />
-            )
-          })
-        }
+      <Fade
+        direction={"left"}
+        triggerOnce={true}
+      >
 
-      </div>
-      <div className="socials-spacer"></div>
+        <div className="social-sliders">
+          {
+            socialIcons.map((icon, index) => {
+              return (
+                <SocialSidebarIcons name={icon.name} iconPath={icon.iconPath} index={index} />
+              )
+            })
+          }
+
+        </div>
+        <div className="socials-spacer"></div>
+      </Fade>
     </div>
   )
 }
