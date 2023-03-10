@@ -32,7 +32,7 @@ const Header = () => {
         {
           headerLinks.map((link, i) => {
             return (
-              <HeaderLink title={link.title} id={i} />
+              <HeaderLink title={link.title} i={i} />
             )
           })
         }
@@ -54,7 +54,7 @@ const Header = () => {
           {
             headerLinks.map((link, i) => {
               return (
-                <HeaderLink title={link.title} id={i} />
+                <HeaderLink title={link.title} setToggleView={setToggleView} i={i} />
               )
             })
           }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const HeaderLink = ({ title }) => {
+const HeaderLink = ({ title, setToggleView, i }) => {
   const [isActive, setIsActive] = useState(false)
   const [hover, setHover] = useState()
 
@@ -17,10 +17,11 @@ const HeaderLink = ({ title }) => {
     const element = document.getElementById(title.toLowerCase())
     console.dir(element)
     element.scrollIntoView({ behavior: 'smooth' })
+    setToggleView(false)
   }
 
   return (
-    <div className={`header-link ${isActive ? 'active' : ''} `}
+    <div key={i} className={`header-link ${isActive ? 'active' : ''} `}
       onClick={handleClick}
       onMouseEnter={handleStartHover}
       onMouseLeave={handleEndHover}>

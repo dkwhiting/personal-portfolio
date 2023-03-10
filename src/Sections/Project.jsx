@@ -2,21 +2,21 @@ import React from 'react'
 import { Fade } from 'react-awesome-reveal'
 import { Icon } from '@iconify/react'
 
-const Project = ({ project }) => {
+const Project = ({ project, i }) => {
   const imgUrl = new URL(`../assets/${project.imgPath}`, import.meta.url).href
   return (
-    <Fade
-      direction={"up"}
-      triggerOnce={true}
-    >
-      <div className="project">
+    <div key={i} className="project">
+      <Fade
+        direction={"up"}
+        triggerOnce={true}
+      >
 
-        <div className="project-title">
-          <h2>{project.name}</h2>
-        </div>
         <img src={imgUrl} alt={`${project.name} image`} />
         <div className="project-bottom">
           <div className="project-header">
+            <div className="project-title">
+              <h2>{project.name}</h2>
+            </div>
           </div>
           <div className="project-description">
             {project.description}
@@ -55,8 +55,8 @@ const Project = ({ project }) => {
             }
           </div>
         </div>
-      </div>
-    </Fade>
+      </Fade>
+    </div>
   )
 }
 

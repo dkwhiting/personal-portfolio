@@ -14,7 +14,7 @@ const Projects = () => {
           {
             projects.map((project, index) => {
               return (
-                <Project project={project} key={index} />
+                <Project project={project} i={index} />
               )
             })
           }

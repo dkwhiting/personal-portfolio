@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react'
 
 
-const SocialSidebarIcons = ({ name, iconPath, index }) => {
+const SocialSidebarIcons = ({ name, linkPath, iconPath, index }) => {
   const [hover, setHover] = useState(false)
   const [width, setWidth] = useState(0)
 
@@ -12,7 +12,9 @@ const SocialSidebarIcons = ({ name, iconPath, index }) => {
   }, [])
 
   const handleMouseEnter = (e) => {
-    setHover(true)
+    if (window.innerWidth > 840) {
+      setHover(true)
+    }
   }
 
   const handleMouseLeave = (e) => {
@@ -21,17 +23,21 @@ const SocialSidebarIcons = ({ name, iconPath, index }) => {
 
   return (
 
-    <div
-      className={`single-social ${name.toLowerCase()} ${hover ? 'hover' : ''}`}
-      style={hover ? { transform: `translateX(${width - 10}px)` } : null}
-      onMouseEnter={(e) => handleMouseEnter(e)}
-      onMouseLeave={(e) => handleMouseLeave(e)}
-      key={index}
+    <a key={index} href={linkPath}
+      target="_blank"
     >
+      <div
+        className={`single-social ${name.toLowerCase()} ${hover ? 'hover' : ''}`}
+        style={hover ? { transform: `translateX(${width - 10}px)` } : null}
+        onMouseEnter={(e) => handleMouseEnter(e)}
+        onMouseLeave={(e) => handleMouseLeave(e)}
 
-      <h3>{name}</h3>
-      <Icon className="social-icon" icon={iconPath} />
-    </div>
+      >
+
+        <h3>{name}</h3>
+        <Icon className="social-icon" icon={iconPath} />
+      </div >
+    </a>
 
 
   )

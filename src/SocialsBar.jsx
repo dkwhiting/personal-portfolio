@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SocialSidebarIcons from './SocialSidebarIcons'
 import { Fade } from 'react-awesome-reveal'
 
 const SocialsSidebar = () => {
+
+
   const socialIcons = [
     {
       name: 'LinkedIn',
-      iconPath: 'mdi:linkedin'
+      iconPath: 'mdi:linkedin',
+      linkPath: 'https://www.linkedin.com/in/dallinwhiting/'
     },
     {
       name: 'GitHub',
-      iconPath: 'mdi:github'
+      iconPath: 'mdi:github',
+      linkPath: 'https://github.com/dkwhiting/'
     },
+    {
+      name: 'Resume',
+      iconPath: 'mdi:resume',
+      linkPath: 'resume.pdf'
+    }
   ]
 
 
@@ -26,7 +35,7 @@ const SocialsSidebar = () => {
           {
             socialIcons.map((icon, index) => {
               return (
-                <SocialSidebarIcons name={icon.name} iconPath={icon.iconPath} index={index} />
+                <SocialSidebarIcons name={icon.name} linkPath={icon.linkPath} iconPath={icon.iconPath} index={index} />
               )
             })
           }
