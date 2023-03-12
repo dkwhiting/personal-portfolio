@@ -1,6 +1,7 @@
 import React from 'react'
 import SkillTile from './SkillTile'
 import { techs } from './projectData'
+import { Fade } from 'react-awesome-reveal'
 
 const Skills = () => {
   return (<>
@@ -10,7 +11,11 @@ const Skills = () => {
         {
           techs.map((skill, index) => {
             return (
-              <SkillTile name={skill.name} path={skill.path} />
+              <Fade
+                direction='up'
+                triggerOnce='true'>
+                <SkillTile name={skill.name} path={skill.path} />
+              </Fade>
             )
           })
         }
