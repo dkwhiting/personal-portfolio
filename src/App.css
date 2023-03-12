@@ -209,7 +209,6 @@ a:hover {
   resize: both;
 }
 
-
 #projects {
   display: flex;
   flex-direction: column;
@@ -585,7 +584,7 @@ a:hover {
   }
 
   .section {
-    padding: 50px 70px;
+    padding: 50px 45px;
 
   }
 
@@ -593,9 +592,6 @@ a:hover {
     right: -55px;
     font-family: 'Nunito', sans-serif;
   }
-
-  .status-indicator p {}
-
 
   #home .left {
     align-items: center;
@@ -613,7 +609,7 @@ a:hover {
   }
 
   #home .intro .lg {
-    font-size: 3rem;
+    font-size: 3.25rem;
   }
 
   #home .intro .med,
