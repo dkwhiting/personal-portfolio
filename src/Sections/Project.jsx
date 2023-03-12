@@ -5,22 +5,22 @@ import { Icon } from '@iconify/react'
 const Project = ({ project, i }) => {
   const imgUrl = new URL(`../assets/${project.imgPath}`, import.meta.url).href
   return (
-    <div key={i} className="project">
-      <Fade
-        direction={"up"}
-        triggerOnce={true}
-      >
+    <Fade
+      direction={"up"}
+      triggerOnce={true}
+      className='project'
+      key={i}
+    >
 
-        <img src={imgUrl} alt={`${project.name} image`} />
-        <div className="project-bottom">
-          <div className="project-header">
-            <div className="project-title">
-              <h2>{project.name}</h2>
-            </div>
-          </div>
-          <div className="project-description">
-            {project.description}
-          </div>
+
+      {/* <img src={imgUrl} alt={`${project.name} image`} /> */}
+      <div>
+        <div className="project-title">
+          <h2>{project.name}</h2>
+        </div>
+        <div className="project-description">
+          {project.description}
+        </div><div className="project-bottom">
           <div className="tech-stack">
             {
               project.techStack.map((tech, index) => {
@@ -55,8 +55,10 @@ const Project = ({ project, i }) => {
             }
           </div>
         </div>
-      </Fade>
-    </div>
+      </div>
+
+
+    </Fade>
   )
 }
 

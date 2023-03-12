@@ -12,11 +12,11 @@ const Home = () => {
 
   return (
     <>
+      <div className="status-indicator">
+        <div className="led green"></div>
+        <p>Looking for Work</p>
+      </div>
       <div id="home">
-        <div className="status-indicator">
-          <div className="led green"></div>
-          <p>Looking for Work</p>
-        </div>
         <Fade
           direction={"down"}
           triggerOnce={true}
