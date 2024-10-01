@@ -232,6 +232,11 @@ section {
   border: none;
 }
 
+#contact button:hover {
+  cursor: pointer;
+  filter:brightness(110%)
+}
+
 #projects {
   width: 100%;
   display: flex;

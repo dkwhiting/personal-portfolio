@@ -17,7 +17,8 @@ const Contact = () => {
       .then((result) => {
         toast.success("Message sent!", {
               position: "bottom-right"
-            });
+        });
+        form.current.reset();
       }, (error) => {
         toast.error("Unable to send message", {
               position: "bottom-right"
