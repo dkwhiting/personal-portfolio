@@ -614,24 +614,13 @@ section {
   font-size: 16px;
 }
 
-/* Large screens (max-width: 1280px) */
 @media (max-width: 1280px) {
   section {
     padding: 50px 50px;
   }
-
-  #home .intro .lg {
-    font-size: 5.6rem;
-  }
-
-  #home .intro .med,
-  #home .intro .med.bottom {
-    font-size: 3rem;
-  }
 }
 
-/* Tablets and medium screens (max-width: 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 769px) {
   .project-tiles {
     flex-direction: column;
   }
@@ -649,36 +638,14 @@ section {
   }
 
   #socials-sidebar .single-social:hover {
-    transform: translateX(-10px) scale(1.25);
+    transform: translateX(-10px) scale(1.25)
   }
 
-  .tile {
-    width: 120px;
-    height: 120px;
-  }
-
-  .tile .icon svg {
-    width: 80px;
-    height: 80px;
-  }
-
-  #contact {
-    flex-direction: column;
-  }
 }
 
-/* Small tablets and mobile screens (max-width: 768px) */
-@media (max-width: 768px) {
-  .project-tiles {
-    flex-direction: column;
-  }
-
-  .project {
-    min-width: 100%;
-  }
-
-  section {
-    padding: 50px 40px;
+@media (max-width: 600px) {
+  #header .header-links-big {
+    display: none;
   }
 
   #home .intro .lg {
@@ -689,18 +656,27 @@ section {
   #home .intro .med.bottom {
     font-size: 1.75rem;
   }
+}
 
-  #header .header-links-big {
+@media (min-width: 560px) {
+  #header .header-links-small {
     display: none;
   }
 }
 
-/* Mobile phones (max-width: 600px) */
-@media (max-width: 600px) {
-  #header .header-links-small {
-    display: none;
+@media (max-width: 900px) {
+  .tile {
+    width: 120px;
+    height: 120px;
   }
 
+  .tile .icon svg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 490px) {
   .tile {
     width: 90px;
     height: 90px;
@@ -716,15 +692,21 @@ section {
   }
 }
 
-/* Small mobile phones (max-width: 480px) */
-@media (max-width: 480px) {
-  #home .intro .lg {
-    font-size: 2.2rem;
+@media (max-width: 650px) {
+  #contact {
+    flex-direction: column;
   }
+}
+
+@media (max-width: 450px) {
 
   #home .intro .med,
   #home .intro .med.bottom {
     font-size: 1.3rem;
+  }
+
+  #home .intro .lg {
+    font-size: 2.2rem;
   }
 
   .tile {
@@ -735,5 +717,16 @@ section {
   .tile .icon svg {
     width: 80px;
     height: 80px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #home .intro .lg {
+    font-size: 5.6rem;
+  }
+
+  #home .intro .med,
+  #home .intro .med.bottom {
+    font-size: 3rem;
   }
 }
