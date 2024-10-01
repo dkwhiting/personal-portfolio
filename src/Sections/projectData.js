@@ -28,6 +28,9 @@ const javascript = new Tech('JavaScript', 'skill-icons:javascript')
 const typescript = new Tech('TypeScript', 'skill-icons:typescript')
 const react = new Tech('React', 'logos:react')
 const redux = new Tech('Redux', 'skill-icons:redux')
+const bootstrap = new Tech('Bootstrap', 'skill-icons:bootstrap')
+const jquery = new Tech('jQuery', 'simple-icons:jquery')
+const java = new Tech('Java', 'skill-icons:java-dark')
 const nodejs = new Tech('Node.js', 'vscode-icons:file-type-node')
 const express = new Tech('Express', 'simple-icons:express')
 const html = new Tech('HTML', 'vscode-icons:file-type-html')
@@ -36,6 +39,9 @@ const git = new Tech('Git', 'mdi:git')
 const postgresql = new Tech('PostgreSQL', 'logos:postgresql')
 const mysql = new Tech('MySQL', 'logos:mysql')
 const restapi = new Tech('REST API', 'vscode-icons:file-type-rest')
+const expo = new Tech('Expo', 'simple-icons:expo')
+const tailwind = new Tech('Tailwind', 'skill-icons:tailwindcss-light')
+const reactNative = new Tech('React Native', 'skill-icons:react-light')
 
 const flashsheet = new Project(
   'Flashsheet',
@@ -101,10 +107,16 @@ export const techs = [
   typescript,
   react,
   redux,
-  nodejs,
-  express,
+  reactNative,
+  expo,
+  java,
+  bootstrap,
   html,
   css,
+  tailwind,
+  jquery,
+  nodejs,
+  express,
   git,
   postgresql,
   mysql,

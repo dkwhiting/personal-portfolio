@@ -10,18 +10,18 @@ const Sections = () => {
 
   return (
     <div id="sections">
-      <div className="section">
+      <section>
         <Home />
-      </div>
-      <div className="section">
+      </section>
+      <section>
         <Projects />
-      </div>
-      <div className="section">
+      </section>
+      <section>
         <Skills />
-      </div>
-      <div className="section">
+      </section>
+      <section>
         <Contact />
-      </div>
+      </section>
     </div>
   )
 }

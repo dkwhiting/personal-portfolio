@@ -4,7 +4,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div id="footer">
-      <Icon icon='ic:outline-copyright' /> 2023 Dallin Whiting
+      <Icon icon='ic:outline-copyright' /> 2024 Dallin Whiting
     </div>
   )
 }

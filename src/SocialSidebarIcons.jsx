@@ -12,7 +12,7 @@ const SocialSidebarIcons = ({ name, linkPath, iconPath, index }) => {
   }, [])
 
   const handleMouseEnter = (e) => {
-    if (window.innerWidth > 840) {
+    if (window.innerWidth > 1080) {
       setHover(true)
     }
   }

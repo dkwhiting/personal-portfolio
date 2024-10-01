@@ -3,6 +3,7 @@ import Header from './Header'
 import Sections from './Sections/Sections'
 import Footer from './Footer'
 import SocialsSidebar from './SocialsBar'
+import { ToastContainer } from 'react-toastify'
 
 
 // Auto textarea resize
@@ -27,6 +28,7 @@ function App() {
       <Sections />
       <SocialsSidebar />
       <Footer />
+      <ToastContainer />
     </div>
   )
 }

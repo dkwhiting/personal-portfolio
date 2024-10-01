@@ -1,17 +1,27 @@
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_yqgecly', 'template_hn3a4bc', form.current, 'FfZuNODeZi9Im9Vbp')
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+        form.current, 
+        {publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY})
       .then((result) => {
-        console.log(result.text);
+        toast.success("Message sent!", {
+              position: "bottom-right"
+            });
       }, (error) => {
-        console.log(error.text);
+        toast.error("Unable to send message", {
+              position: "bottom-right"
+            });
       });
   };
 
@@ -22,14 +32,11 @@ const Contact = () => {
         <p>Feel free to shoot me a message if you are interested in my work, would like to collaborate, or just to say hi! </p>
       </div>
       <div className="right">
-        <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input type="text" name="user_name" />
-          <label>Email</label>
-          <input type="email" name="user_email" />
-          <label>Message</label>
-          <textarea name="message" rows='10' />
-          <input type="submit" value="Send" />
+        <form id="contactForm" ref={form} onSubmit={sendEmail}>
+          <input class="name" type="text" name="user_name" placeholder="Name" />
+          <input class="email" type="email" name="user_email" placeholder="Email" />
+          <textarea class="message" name="message" rows='10' placeholder="Message" />
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>

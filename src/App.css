@@ -47,8 +47,6 @@
   transition: all 200ms ease-in-out;
 }
 
-
-
 a:hover {
   cursor: pointer;
 }
@@ -117,12 +115,12 @@ a:hover {
   justify-content: center;
 }
 
-.section:nth-child(even) {
+section:nth-child(even) {
   color: black;
   background-color: rgb(246, 246, 246);
 }
 
-.section {
+section {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -161,6 +159,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   transition: all 200ms ease-in-out;
+  text-wrap: nowrap;
 }
 
 .tile:hover {
@@ -177,37 +176,60 @@ a:hover {
 }
 
 #contact {
-
   display: flex;
   margin: 0 150px;
   width: 100%;
   max-width: 800px;
   flex: 1;
-  gap: 50px;
+  gap: 20px;
 }
 
 #contact form {
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 #contact .left {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  justify-content: center;
+  flex: 1.5;
+  justify-content: start;
+  gap: 8px;
 }
 
 #contact .right {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  flex: 1.5;
+  flex: 1;
 }
 
 #contact textarea {
   resize: vertical;
+  height: 90px;
+  min-height: 60px;
+  padding: 6px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: solid slategray 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact input {
+  padding: 6px;
+  border-radius: 10px;
+  border: solid slategray 1px;
+}
+
+#contact button {
+  padding: 6px;
+  border-radius: 10px;
+  background-color: #35445b;
+  color: white;
+  border: none;
 }
 
 #projects {
@@ -592,8 +614,24 @@ a:hover {
   font-size: 16px;
 }
 
+/* Large screens (max-width: 1280px) */
+@media (max-width: 1280px) {
+  section {
+    padding: 50px 50px;
+  }
 
-@media (max-width: 840px) {
+  #home .intro .lg {
+    font-size: 5.6rem;
+  }
+
+  #home .intro .med,
+  #home .intro .med.bottom {
+    font-size: 3rem;
+  }
+}
+
+/* Tablets and medium screens (max-width: 1024px) */
+@media (max-width: 1024px) {
   .project-tiles {
     flex-direction: column;
   }
@@ -602,9 +640,8 @@ a:hover {
     min-width: 100%;
   }
 
-  .section {
-    padding: 50px 55px;
-
+  section {
+    padding: 50px 40px;
   }
 
   #home .left {
@@ -612,14 +649,36 @@ a:hover {
   }
 
   #socials-sidebar .single-social:hover {
-    transform: translateX(-10px) scale(1.25)
+    transform: translateX(-10px) scale(1.25);
   }
 
+  .tile {
+    width: 120px;
+    height: 120px;
+  }
+
+  .tile .icon svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
 }
 
-@media (max-width: 600px) {
-  #header .header-links-big {
-    display: none;
+/* Small tablets and mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .project-tiles {
+    flex-direction: column;
+  }
+
+  .project {
+    min-width: 100%;
+  }
+
+  section {
+    padding: 50px 40px;
   }
 
   #home .intro .lg {
@@ -630,27 +689,18 @@ a:hover {
   #home .intro .med.bottom {
     font-size: 1.75rem;
   }
-}
 
-@media (min-width: 560px) {
-  #header .header-links-small {
+  #header .header-links-big {
     display: none;
   }
 }
 
-@media (max-width: 900px) {
-  .tile {
-    width: 120px;
-    height: 120px;
+/* Mobile phones (max-width: 600px) */
+@media (max-width: 600px) {
+  #header .header-links-small {
+    display: none;
   }
 
-  .tile .icon svg {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-@media (max-width: 490px) {
   .tile {
     width: 90px;
     height: 90px;
@@ -666,21 +716,15 @@ a:hover {
   }
 }
 
-@media (max-width: 650px) {
-  #contact {
-    flex-direction: column;
+/* Small mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  #home .intro .lg {
+    font-size: 2.2rem;
   }
-}
-
-@media (max-width: 450px) {
 
   #home .intro .med,
   #home .intro .med.bottom {
     font-size: 1.3rem;
-  }
-
-  #home .intro .lg {
-    font-size: 2.2rem;
   }
 
   .tile {
@@ -691,16 +735,5 @@ a:hover {
   .tile .icon svg {
     width: 80px;
     height: 80px;
-  }
-}
-
-@media (min-width: 1000px) {
-  #home .intro .lg {
-    font-size: 5.6rem;
-  }
-
-  #home .intro .med,
-  #home .intro .med.bottom {
-    font-size: 3rem;
   }
 }

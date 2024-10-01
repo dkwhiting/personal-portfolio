@@ -12,10 +12,10 @@ const Home = () => {
 
   return (
     <>
-      <div className="status-indicator">
+      {/* <div className="status-indicator">
         <div className="led green"></div>
         <p>Looking for Work</p>
-      </div>
+      </div> */}
       <div id="home">
         <Fade
           direction={"down"}
